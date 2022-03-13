@@ -13,18 +13,27 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
+      <div class="col-md-12 jumbotron text-center" style="background-color:darkgreen; color: white">
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+        <div class="col-md-12">
+        <div class="well">
+      <p>As part of a project to identify candidate bacteria for symthetic beef, a study was performed collecting bacteria from the belly buttons of a range of human test subjects. The results are collected here. Explore the results by selecting a test subject ID.</p>
+    </div>
+</div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
         <div class="well">
           <h5>Test Subject ID No.:</h5>
           <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
+      </div>
+      <div class="col-md-9">
         <div class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
@@ -32,10 +41,12 @@
           <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
-      <div class="col-md-5">
+    </div>
+    <div class="row">
+      <div class="col-md-6">
         <div id="bar"></div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-6">
         <div id="gauge"></div>
       </div>
     </div>
